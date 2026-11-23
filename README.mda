@@ -1,0 +1,55 @@
+
+# CART3R VPN Blocker
+
+Aplicación Android en Kotlin que crea una VPN local de bloqueo (firewall tipo interruptor).
+
+No utiliza servidores VPN ni enruta el tráfico a terceros: descarta los paquetes de red mientras está activada.
+
+## Funciones
+
+- Activar/desactivar el bloqueo desde la app.
+- Botón flotante movible.
+- Tamaño ajustable de 40 a 120 dp.
+- Interfaz ligera.
+- Sin librerías externas.
+- GitHub Actions para generar un APK de prueba.
+
+## Importante
+
+- No es una VPN de privacidad.
+- No cambia tu IP.
+- No cifra el tráfico hacia un servidor remoto.
+- Android solicita autorización para crear la VPN.
+- Solo puede haber una VPN activa por usuario o perfil.
+- El botón flotante requiere permiso para mostrarse sobre otras apps.
+- El bloqueo afecta a todo el dispositivo.
+- El bloqueo no garantiza un corte absolutamente instantáneo.
+- Para recuperar Internet, desactiva el bloqueo desde la app o el botón flotante.
+
+## Generar APK con GitHub
+
+1. Crea un repositorio en GitHub.
+2. Sube el contenido del proyecto a la raíz.
+3. Abre Actions.
+4. Ejecuta Build Android APK.
+5. Abre la ejecución completada.
+6. Descarga el artefacto CART3R-VPN-Blocker-debug.
+
+## Requisitos
+
+- JDK 17
+- Android SDK 35
+- Gradle 8.9
+- Android Gradle Plugin 8.7.3
+
+## Estructura
+
+- .github/workflows/build.yml
+- app/build.gradle.kts
+- app/src/main/AndroidManifest.xml
+- MainActivity.kt
+- BlockVpnService.kt
+- FloatingBubbleService.kt
+- build.gradle.kts
+- gradle.properties
+- settings.gradle.kts
